@@ -47,6 +47,9 @@ app.get("/filteredimage/:image_url", async (req, res) => {
         console.log("File sent successful")
         res.status = 200
 
+        // delete file after sending it
+        deleteLocalFiles([saved_url])
+
       }
     })
   } else {

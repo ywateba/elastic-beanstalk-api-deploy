@@ -40,3 +40,10 @@ import Jimp from "jimp";
     fs.unlinkSync(file);
   }
 }
+
+
+export function isImageFilename(filename) {
+  // Regular expression to match common image file extensions
+  const pattern = /\.(jpg|jpeg|png|gif|bmp|webp)$/i;
+  return pattern.test(filename);
+}

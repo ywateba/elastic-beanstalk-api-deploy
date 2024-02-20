@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import validator from 'validator'
+import cors from 'cors'
 
 import { filterImageFromURL, deleteLocalFiles, isImageFilename } from './util/util.js';
 
@@ -12,12 +13,13 @@ const app = express();
 // Set the network port
 const port = process.env.PORT || 8082;
 
+
 // Use the body parser middleware for post requests
 app.use(bodyParser.json());
 
-app.get("/filteredimage/:image_url", async (req, res) => {
+app.get("/filteredimage", async (req, res) => {
 
-  const { image_url } = req.params;
+  const { image_url: image_url } = req.query;
   console.log(image_url)
 
   // Validate the URL
@@ -35,10 +37,10 @@ app.get("/filteredimage/:image_url", async (req, res) => {
 
 
   let saved_url = await filterImageFromURL(image_url)
-  console.log(saved_url)
+  console.log("saved_url :",saved_url)
 
   if (saved_url) {
-    res.sendFile(saved_url, (err) => {
+    res.status(200).sendFile(saved_url, (err) => {
       if (err) {
         console.log(err)
         res.status = 500

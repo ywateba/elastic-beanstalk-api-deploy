@@ -14,7 +14,9 @@ import Jimp from "jimp";
       const outpath = "/tmp/filtered." + Math.floor(Math.random() * 2000) + ".jpg";
 
       console.log(outpath)
+      console.log("input_url", inputURL)
       const photo = await Jimp.read(inputURL);
+
 
       await photo
         .resize(256, 256) // resize
@@ -25,6 +27,7 @@ import Jimp from "jimp";
       return outpath
     } catch (error) {
       console.log(error)
+      console.log("Some error occured")
 
     }
 
@@ -45,5 +48,5 @@ import Jimp from "jimp";
 export function isImageFilename(filename) {
   // Regular expression to match common image file extensions
   const pattern = /\.(jpg|jpeg|png|gif|bmp|webp)$/i;
-  return pattern.test(filename);
+  return pattern.test(filename.toLowerCase());
 }

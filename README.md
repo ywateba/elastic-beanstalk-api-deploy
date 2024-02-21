@@ -36,7 +36,7 @@ To run the project you nedd to have the follwing install
 
 ### Deployment page
 
-  - http://udagram.eba-hh3wjnzm.us-east-1.elasticbeanstalk.com/
+  - http://udagram.us-east-1.elasticbeanstalk.com/
 
 
 

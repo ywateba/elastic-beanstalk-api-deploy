@@ -17,15 +17,15 @@ To run the project you nedd to have the follwing install
 ### How to deploy the project
 
 ```bash
-    ebs init #  follow instructions given by the prompt
+    eb init #  follow instructions given by the prompt
 
     # then
 
-    ebs create <env_name> --profile your_aws_profile
+    eb create <env_name> --profile your_aws_profile
 
     #After some minutes , the project will be deployed.
 
-    ebs open # to go to the deployment page
+    eb open # to go to the deployment page
 ```
 
 

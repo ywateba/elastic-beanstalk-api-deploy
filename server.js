@@ -62,6 +62,12 @@ app.get("/filteredimage", async (req, res) => {
 
 });
 
+// health check endpoint
+app.get("/health", async (req, res) => {
+  res.status(200).send("ok")
+});
+
+
 // Root Endpoint
 // Displays a simple message to the user
 app.get("/", async (req, res) => {

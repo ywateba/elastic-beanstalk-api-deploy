@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import validator from 'validator'
-import cors from 'cors'
+
 
 import { filterImageFromURL, deleteLocalFiles, isImageFilename } from './util/util.js';
 
@@ -11,7 +11,7 @@ import { filterImageFromURL, deleteLocalFiles, isImageFilename } from './util/ut
 const app = express();
 
 // Set the network port
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 8080;
 
 
 // Use the body parser middleware for post requests

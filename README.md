@@ -29,14 +29,6 @@ To run the project you nedd to have the follwing install
 ```
 
 
-### EBS Dashboard
-
-![Ebs Dashbord](./ebs.PNG)
-![App Dashboard](./ebs2.PNG)
-
-### Deployment page
-
-  - http://udagram.us-east-1.elasticbeanstalk.com/
 
 
 
